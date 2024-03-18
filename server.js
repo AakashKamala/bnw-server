@@ -18,10 +18,12 @@ connection.once('open', () => {
 const productRoutes = require('./routes/productRoutes');
 const signupRoutes = require('./routes/signupRoutes');
 const cartRoutes=require('./routes/cartRoutes');
+const orderRoutes=require('./routes/orderRoutes');
 
 app.use('/api/products', productRoutes);
 app.use('/api/auth',signupRoutes);
 app.use('/api/cart',cartRoutes);
+app.use('/api/orders',orderRoutes)
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
